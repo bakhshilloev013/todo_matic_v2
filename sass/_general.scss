@@ -1,0 +1,139 @@
+.main {
+    min-height: 1000px;
+    width: 100%;
+    .main_items {
+        min-height: 1000px;
+        width: 100%;
+        padding: 50px 0px;
+        .main_title {
+            text-align: center;
+            color: darkslategray;
+        }
+        .main_content {
+            min-height: 700px;
+            width: 100%;
+            .main_form {
+                height: 300px;
+                width: 700px;
+                margin: 0 auto;
+                margin-top: 35px;
+                box-shadow: 0 0 15px 1px gainsboro;
+                border-radius: 35px;
+                form {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    input {
+                        width: 500px;
+                        height: 40px;
+                        outline: none;
+                        padding-left: 15px;
+                        margin-right: 10px;
+                        border: 2px dashed darkgray;
+                    }
+                    button {
+                        height: 40px;
+                        width: 70px;
+                        border-radius: 5px;
+                        border: none;
+                        background-color: darkgray;
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: #fff;
+                    }
+                }
+                &:hover {
+                    transition: 0.3s all;
+                    box-shadow: 0 0 15px 5px lightskyblue;
+                    form {
+                        input {
+                            border: 2px dashed lightskyblue;
+                        }
+                        button {
+                            background-color: lightskyblue;
+                            &:hover {
+                                    transition: 0.3s all;
+                                    background-color: lightgreen;
+                            }
+                            &:active {
+                                transition: 0.2s all;
+                                height: 38px;
+                            }
+                        }
+                    }
+                }
+            }
+            .main_tasks {
+                min-height: 500px;
+                width: 100%;
+                box-shadow: 0 0 15px 5px gainsboro;
+                border-radius: 15px;
+                margin-top: 35px;
+                padding: 20px 50px;
+                // padding: 20px;
+                display: none;
+                justify-content: center;
+                flex-wrap: wrap;
+                transition: 0.3s all;
+                transform: scale(1);
+                .main_item {
+                    height: 150px;
+                    width: 350px;
+                    margin: 10px;
+                    border: 1px solid gainsboro;
+                    .item_base {
+                        height: 150px;
+                        width: 350px;
+                        padding: 15px;
+                        // display: none;
+                        display: flex;
+                        flex-direction: column;
+                        .item_btns {
+                            width: 150px;
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: 15px;
+                            .item_edit {
+                                @include btn-case;
+                            }
+                            .item_delete {
+                                @include btn-case;
+                                background-color: rgb(196, 81, 81);
+                            }
+                    }
+                    }
+                    .item_edit_mode {
+                        height: 150px;
+                        width: 350px;
+                        padding: 15px;
+                        display: none;
+                        // display: flex;
+                        flex-direction: column;
+                        form {
+                            margin-top: 15px;
+                            input {
+                                width: 250px;
+                                height: 30px;
+                                outline: none;
+                                padding-left: 5px;
+                                border-radius: 3px;
+                                border: 2px dashed $edit;
+                            }
+                            button {
+                                @include btn-case;
+                                height: 30px;
+                                &:active {
+                                    transition: 0.2s all;
+                                    height: 28px;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

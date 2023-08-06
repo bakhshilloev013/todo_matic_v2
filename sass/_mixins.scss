@@ -1,0 +1,15 @@
+@mixin btn-case {
+    height: 35px;
+    padding: 0 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffbd43;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    &:active {
+        transition: 0.2s all;
+        height: 33px;
+        padding: 0 13px;
+    }
+}
